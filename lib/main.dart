@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_management_app/config/route/route.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ScreenUtilInit(
+      designSize: Size(414, 896),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      ensureScreenSize: true,
+      builder: (context, child) => MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
