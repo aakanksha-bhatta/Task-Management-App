@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_management_app/feature/auth/presentation/widgets/text_widget.dart';
 
 class InputTextFormWidget extends StatelessWidget {
@@ -35,14 +36,14 @@ class InputTextFormWidget extends StatelessWidget {
         if (labelText != null && labelText!.isNotEmpty) ...[
           TextWidget(
             text: labelText!,
-            fontSize: 12,
+            fontSize: 12.sp,
             fontWeight: FontWeight.w600,
             color: const Color(0xff7C7C7C),
             letterSpacing: 0.5,
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
         ] else ...[
-          const SizedBox(height: 2),
+          SizedBox(height: 2.h),
         ],
         TextFormField(
           inputFormatters: inputFormatters,
@@ -54,21 +55,21 @@ class InputTextFormWidget extends StatelessWidget {
             hintText: hintText,
             filled: true,
             fillColor: const Color(0xFFF0F0F0),
-            contentPadding: const EdgeInsets.symmetric(
-              horizontal: 16,
-              vertical: 14,
+            contentPadding: EdgeInsets.symmetric(
+              horizontal: 16.w,
+              vertical: 14.h,
             ),
             suffixIcon: suffixIcon,
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.r),
               borderSide: BorderSide.none,
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.r),
               borderSide: const BorderSide(color: Color(0xFFE2E2E2), width: 1),
             ),
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.r),
               borderSide: BorderSide.none,
             ),
           ),

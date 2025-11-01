@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 class PersistentBottomNavBarWidget extends StatefulWidget {
@@ -77,7 +78,7 @@ class _PersistentBottomNavBarWidgetState
           resizeToAvoidBottomInset: true,
           stateManagement: true,
           decoration: NavBarDecoration(
-            borderRadius: BorderRadius.circular(16.0),
+            borderRadius: BorderRadius.circular(16.0.r),
             colorBehindNavBar: Colors.white,
           ),
           navBarStyle: NavBarStyle.style15,
@@ -85,7 +86,7 @@ class _PersistentBottomNavBarWidgetState
 
         // floating center circular button
         Positioned(
-          bottom: 30, // lift it up
+          bottom: 30.h, // lift it up
           child: GestureDetector(
             onTap: () {
               setState(() {
@@ -93,8 +94,8 @@ class _PersistentBottomNavBarWidgetState
               });
             },
             child: Container(
-              width: 80,
-              height: 80,
+              width: 80.w,
+              height: 80.h,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: const LinearGradient(

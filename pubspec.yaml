@@ -39,6 +39,7 @@ dependencies:
   google_fonts: ^6.3.2
   persistent_bottom_nav_bar: ^6.2.1
   flutter_screenutil: ^5.9.3
+  carousel_slider: ^5.1.1
 
 dev_dependencies:
   flutter_test:
